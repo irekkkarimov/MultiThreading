@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Multu_Threading.BenchmarksTasks-20230513-213800</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.5, OS=Windows 11 (10.0.22000.1817/21H2/SunValley)
+AMD Ryzen 7 5800H with Radeon Graphics, 1 CPU, 16 logical and 8 physical cores
+.NET SDK=7.0.203
+  [Host]     : .NET 6.0.16 (6.0.1623.17311), X64 RyuJIT AVX2
+  DefaultJob : .NET 6.0.16 (6.0.1623.17311), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>            Method</th><th>  Mean</th><th> Error</th><th>StdDev</th><th>Median</th><th>Gen0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Tasks_Size10_Threads1</td><td>859.1 ns</td><td>3.70 ns</td><td>3.09 ns</td><td>857.9 ns</td><td>0.0401</td><td>336 B</td>
+</tr><tr><td>Tasks_Size10_Threads2</td><td>1,401.5 ns</td><td>3.43 ns</td><td>3.04 ns</td><td>1,401.4 ns</td><td>0.0610</td><td>511 B</td>
+</tr><tr><td>Tasks_Size10_Threads4</td><td>3,365.5 ns</td><td>9.08 ns</td><td>8.05 ns</td><td>3,367.3 ns</td><td>0.0992</td><td>845 B</td>
+</tr><tr><td>Tasks_Size10_Threads8</td><td>7,333.6 ns</td><td>44.18 ns</td><td>41.33 ns</td><td>7,334.6 ns</td><td>0.1831</td><td>1533 B</td>
+</tr><tr><td>Tasks_Size10_Threads16</td><td>14,508.3 ns</td><td>61.44 ns</td><td>57.47 ns</td><td>14,504.6 ns</td><td>0.3357</td><td>2926 B</td>
+</tr><tr><td>Tasks_Size100_Threads1</td><td>8,612.6 ns</td><td>68.73 ns</td><td>64.29 ns</td><td>8,613.6 ns</td><td>0.0305</td><td>336 B</td>
+</tr><tr><td>Tasks_Size100_Threads2</td><td>9,091.3 ns</td><td>52.46 ns</td><td>49.07 ns</td><td>9,095.1 ns</td><td>0.0610</td><td>512 B</td>
+</tr><tr><td>Tasks_Size100_Threads4</td><td>10,296.3 ns</td><td>127.99 ns</td><td>113.46 ns</td><td>10,269.0 ns</td><td>0.0916</td><td>864 B</td>
+</tr><tr><td>Tasks_Size100_Threads8</td><td>13,931.4 ns</td><td>87.30 ns</td><td>77.39 ns</td><td>13,916.2 ns</td><td>0.1831</td><td>1568 B</td>
+</tr><tr><td>Tasks_Size100_Threads16</td><td>16,652.3 ns</td><td>72.44 ns</td><td>60.49 ns</td><td>16,666.3 ns</td><td>0.3357</td><td>2974 B</td>
+</tr><tr><td>Tasks_Size1000_Threads1</td><td>656,820.1 ns</td><td>1,244.98 ns</td><td>1,164.56 ns</td><td>656,623.4 ns</td><td>-</td><td>361 B</td>
+</tr><tr><td>Tasks_Size1000_Threads2</td><td>654,044.4 ns</td><td>2,721.63 ns</td><td>2,412.65 ns</td><td>652,637.1 ns</td><td>-</td><td>537 B</td>
+</tr><tr><td>Tasks_Size1000_Threads4</td><td>758,096.2 ns</td><td>30,902.66 ns</td><td>91,117.19 ns</td><td>729,225.2 ns</td><td>-</td><td>889 B</td>
+</tr><tr><td>Tasks_Size1000_Threads8</td><td>745,732.7 ns</td><td>25,700.47 ns</td><td>75,778.43 ns</td><td>711,585.7 ns</td><td>-</td><td>1593 B</td>
+</tr><tr><td>Tasks_Size1000_Threads16</td><td>773,196.7 ns</td><td>6,540.55 ns</td><td>5,461.65 ns</td><td>771,594.7 ns</td><td>-</td><td>3001 B</td>
+</tr></tbody></table>
+</body>
+</html>

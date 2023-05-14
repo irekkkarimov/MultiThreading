@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Multu_Threading.Benchmarks-20230513-194939</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.5, OS=Windows 11 (10.0.22000.1817/21H2/SunValley)
+AMD Ryzen 7 5800H with Radeon Graphics, 1 CPU, 16 logical and 8 physical cores
+.NET SDK=7.0.203
+  [Host]     : .NET 6.0.16 (6.0.1623.17311), X64 RyuJIT AVX2
+  DefaultJob : .NET 6.0.16 (6.0.1623.17311), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>                               Method</th><th>      Mean</th><th>    Error</th><th>   StdDev</th><th>Gen0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>BenchmarkParallelFor_Size10_Threads1</td><td>679.5 ns</td><td>12.32 ns</td><td>10.92 ns</td><td>0.1831</td><td>1.5 KB</td>
+</tr><tr><td>BenchmarkParallelFor10_Size10_Threads2</td><td>1,359.1 ns</td><td>11.20 ns</td><td>10.47 ns</td><td>0.2022</td><td>1.65 KB</td>
+</tr><tr><td>BenchmarkParallelFor10_Size10_Threads4</td><td>2,199.2 ns</td><td>42.23 ns</td><td>39.50 ns</td><td>0.2518</td><td>2.05 KB</td>
+</tr><tr><td>BenchmarkParallelFor10_Size10_Threads8</td><td>2,798.0 ns</td><td>31.56 ns</td><td>29.52 ns</td><td>0.2975</td><td>2.44 KB</td>
+</tr><tr><td>BenchmarkParallelFor10_Size10_Threads16</td><td>2,865.4 ns</td><td>49.56 ns</td><td>46.36 ns</td><td>0.2975</td><td>2.43 KB</td>
+</tr><tr><td>BenchmarkParallelFor100_Size100_Threads1</td><td>193,861.8 ns</td><td>2,394.20 ns</td><td>2,239.54 ns</td><td>-</td><td>1.5 KB</td>
+</tr><tr><td>BenchmarkParallelFor100_Size100_Threads2</td><td>122,413.1 ns</td><td>1,096.02 ns</td><td>915.23 ns</td><td>-</td><td>1.65 KB</td>
+</tr><tr><td>BenchmarkParallelFor100_Size100_Threads4</td><td>113,145.1 ns</td><td>195.18 ns</td><td>162.99 ns</td><td>0.2441</td><td>2.13 KB</td>
+</tr><tr><td>BenchmarkParallelFor100_Size100_Threads8</td><td>93,256.0 ns</td><td>619.40 ns</td><td>579.39 ns</td><td>0.3662</td><td>2.97 KB</td>
+</tr><tr><td>BenchmarkParallelFor100_Size100_Threads16</td><td>85,306.8 ns</td><td>393.77 ns</td><td>368.33 ns</td><td>0.4883</td><td>4.56 KB</td>
+</tr><tr><td>BenchmarkParallelFor1000_Size1000_Threads1</td><td>171,848,224.4 ns</td><td>2,416,588.66 ns</td><td>2,260,478.53 ns</td><td>-</td><td>3.15 KB</td>
+</tr><tr><td>BenchmarkParallelFor1000_Size1000_Threads2</td><td>90,610,745.2 ns</td><td>605,623.95 ns</td><td>536,869.86 ns</td><td>-</td><td>2.52 KB</td>
+</tr><tr><td>BenchmarkParallelFor1000_Size1000_Threads4</td><td>49,659,829.7 ns</td><td>454,573.25 ns</td><td>425,208.10 ns</td><td>-</td><td>2.36 KB</td>
+</tr><tr><td>BenchmarkParallelFor1000_Size1000_Threads8</td><td>32,583,726.6 ns</td><td>628,349.89 ns</td><td>880,858.79 ns</td><td>-</td><td>3.03 KB</td>
+</tr><tr><td>BenchmarkParallelFor1000_Size1000_Threads16</td><td>29,843,701.0 ns</td><td>550,211.51 ns</td><td>715,430.37 ns</td><td>-</td><td>4.7 KB</td>
+</tr></tbody></table>
+</body>
+</html>
